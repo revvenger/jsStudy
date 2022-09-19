@@ -83,3 +83,38 @@
 // ***********
 
 
+// Место для первой задачи
+// function calculateVolumeAndArea(a) {
+//     if (a < 0 || typeof a != 'number' || !Number.isInteger(a)){
+//         console.log("При вычислении проиошла ошибка");
+//         return a;
+//     }
+//     let volume = a * a * a;
+//     let area = a * a * 6;
+//     console.log(`Объем куба: ${volume}, площадь всей поверхности: ${area}`);
+// }
+
+
+
+// calculateVolumeAndArea(5);
+
+// calculateVolumeAndArea(15);
+
+// calculateVolumeAndArea(15.5);
+
+// calculateVolumeAndArea('15');
+
+// calculateVolumeAndArea(-15);
+
+function getCoupeNumber(sit) {
+    if (sit < 0 || sit > 36){
+        return "Таких мест в вагоне не существует";
+    } else if (sit < 0 || typeof sit != 'number' || !Number.isInteger(sit)) {
+        return "Ошибка. Проверьте правильность введенного номера места";
+    } else {
+        console.log(Math.ceil(sit / 4));
+        return (Math.ceil(sit / 4));
+    }
+}
+
+getCoupeNumber(33)
