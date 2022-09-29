@@ -106,15 +106,158 @@
 
 // calculateVolumeAndArea(-15);
 
-function getCoupeNumber(sit) {
-    if (sit < 0 || sit > 36){
-        return "Таких мест в вагоне не существует";
-    } else if (sit < 0 || typeof sit != 'number' || !Number.isInteger(sit)) {
-        return "Ошибка. Проверьте правильность введенного номера места";
+// function getCoupeNumber(sit) {
+//     if (sit < 0 || sit > 36){
+//         return "Таких мест в вагоне не существует";
+//     } else if (sit < 0 || typeof sit != 'number' || !Number.isInteger(sit)) {
+//         return "Ошибка. Проверьте правильность введенного номера места";
+//     } else {
+//         console.log(Math.ceil(sit / 4));
+//         return (Math.ceil(sit / 4));
+//     }
+// }
+
+// getCoupeNumber(33)
+
+
+// function getTimeFromMinutes(mins){
+//     if (mins < 0 || !Number.isInteger(mins)){
+//         console.log("Ошибка, проверьте данные");
+//     } else if (mins > 0 && mins < 60){
+//         console.log(`Это 0 часов и ${mins} минут`);
+//     } else if (mins >= 60 && mins < 120){
+//         console.log(`Это 1 час и ${mins} минут`);
+//     } else if (mins >= 120 && mins < 300){
+//         console.log(`Это ${(mins - (mins%60))/ 60} часа и ${mins%60} минут`);
+//     } else {
+//         console.log(`Это ${Math.ceil(mins/60)} часов и ${mins%60} минут`);
+//     }
+
+// }
+
+// getTimeFromMinutes(150);
+// getTimeFromMinutes(120);
+// getTimeFromMinutes(50.5);
+// getTimeFromMinutes(-150);
+
+
+// function findMaxNumber(a, b, c, d){
+
+//     if(typeof a != 'number' || typeof b != 'number' || typeof c != 'number' || typeof d != 'number'){
+//             console.log(0);
+//             return 0;
+//         }
+//         console.log(Math.max(a, b, c, d));
+//         return Math.max(a, b, c, d);
+//     }
+    
+
+    
+// findMaxNumber(1, 5, 6.6, 11);
+
+// findMaxNumber(1, 5, '6', '10');
+
+// findMaxNumber(1, 5, 6.6);
+
+
+// function fib(args){
+//     const x = [];
+//     if (typeof args != 'number'){
+//         return "";
+//     }else if(args === 0){
+//         return 0;
+//     }
+//     for(let i = 0; i < args; i++){
+//         if (i === 0){
+//         x[i] = 0;            
+//         } else if (i === 1){
+//         x[i] = 1;
+//         } else {
+//         x[i] = x[i-1] + x[i-2];
+//         }
+        
+//     }
+//     let a = ((x.toString()).replace(RegExp(','), ' ')); 
+//     while(a.includes(',')){
+//         a = a.replace(',', '');
+//     }
+    
+// }
+
+// fib(4);
+// fib(7);
+// fib("7");
+// fib(1);
+// fib(0);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function(plan) {
+//         const {age} = plan;
+//         const {languages} = plan.skills;
+//         let str = `Мне ${age} и я владею языками: `;
+
+//         languages.forEach(function(lang) {
+//             str += `${lang.toUpperCase()} `;
+//         });
+
+//         return str;
+//     }
+// };
+
+// personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+// function showExperience(plan) {
+//     const {exp} = plan.skills;
+//     return exp;
+// }
+
+// showExperience(personalPlanPeter);
+
+// function showProgrammingLangs(plan) {
+//     let str = '';
+//     const {programmingLangs} = plan.skills;
+//     for (let key in programmingLangs) {
+//         str += `Язык ${key} изучен на ${programmingLangs[key]}\n`
+//     }
+
+//     return str;
+// }
+
+// showProgrammingLangs(personalPlanPeter);
+
+
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+    if (arr === undefined) {
+        return (`Семья пуста`);
     } else {
-        console.log(Math.ceil(sit / 4));
-        return (Math.ceil(sit / 4));
+        return(`Семья состоит из: ${arr.join(' ')}`);
     }
 }
 
-getCoupeNumber(33)
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+    let str = '';
+    for(let i = 0; i < arr.length; i++){
+        str += `${arr[i].toLowerCase()}\n`;
+    }
+
+    console.log(str);
+}
+
+standardizeStrings(favoriteCities);
+
+
+
